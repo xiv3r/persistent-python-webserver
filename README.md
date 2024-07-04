@@ -1,10 +1,10 @@
-# Persistent-Python-Webserver
+# Persistent Python3 Web File Server
 
 ### Requirements:
  
     sudo apt update
    
-    sudo apt install python2 python3 python3-pip
+    sudo apt install nano bash python2 python3 python3-pip
    
 ### Setup:
 
@@ -12,7 +12,7 @@
 
     sudo nano /etc/python-webserver.sh
 
-#### Add: 
+#### Add this
 
     # -b bind address for httpserver e.g "10.0.0.1:8000"
 
@@ -22,12 +22,13 @@
 
     chmod +x /etc/python-webserver.sh
 
-### Automate execution after reboot through crontab -e
+   
+### Next Automate execution after reboot through crontab
 
     sudo crontab -e 
 
-#### Add
+#### Add this
 
-    @reboot /etc/python-webserver.sh
+    */1 * * * * /etc/python-webserver.sh
 
 
