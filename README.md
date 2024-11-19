@@ -8,13 +8,11 @@
    
 ### Setup:
 
-    sudo -i
-
     sudo nano /etc/python-webserver.sh
 
 #### Add this
 
-    # -b bind address for httpserver e.g "10.0.0.1:8000"
+   - -b address where to bind the httpserver e.g "10.0.0.1:8000"
 
     cd / ; python3 -m http.server -b 10.0.0.1 &> /dev/null & pid=$!
 
